@@ -77,3 +77,21 @@
 - **Monetary median: £700, mean: £2,039** — large gap confirms a small number of high-value customers are pulling the average up.
 - **Monetary min: £0.00** — at least one customer has zero total spend, a data quality flag worth monitoring.
 - **Top spender: £349,164** — likely a wholesale/B2B account, not a typical retail customer.
+## Day 35: Load Cleaned Data into SQLite
+
+### What Was Done
+
+- **Created `scripts/03_load_to_sql.py`** — loaded `retail_cleaned.csv` into SQLite using `df.to_sql()`.
+- **Created `data/retail.db`** — SQLite database file saved inside the project.
+- **Loaded `transactions` table** — 400,947 rows written successfully.
+- **Installed SQLite by alexcvzz** — VS Code extension for running SQL queries directly in editor.
+- **Connected `retail.db` in VS Code** — via `Cmd + Shift + P` - `SQLite: Open Database`.
+- **Ran sanity check queries** — confirmed row count and column structure in results panel.
+- **Created `sql/` folder** — saved first SQL file as `sql/00_sanity_check.sql`.
+
+### Key Findings
+
+- **Rows confirmed: 400,947** — matches cleaned CSV exactly, no data lost in transfer.
+- **All 8 columns present** — Invoice, StockCode, Description, Quantity, InvoiceDate, Price, CustomerID, Country.
+- **Python to SQL handoff complete** — data is now queryable via SQL in VS Code.
+- **`sql/` folder established** — all future SQL files saved here, scripts/ for Python only.

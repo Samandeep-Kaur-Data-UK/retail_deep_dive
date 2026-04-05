@@ -110,9 +110,10 @@
 
 ### Key Findings
 
-* **Monthly Trend**: The highest revenue was generated in [Insert Month].
-* **Top Product**: Our primary volume driver is [Insert Product Name], generating £[Insert Revenue].
-* **International Market**: Excluding the UK, our biggest expansion opportunity is in [Insert Country].
+* **Monthly Trend**: Revenue peaked in **November 2010** at **£1,166,460.02**, showing a strong pre-holiday sales surge.
+* **Top Product**: `WHITE HANGING HEART T-LIGHT HOLDER` generated **£151,339.16**, making it the main revenue driver.
+* **International Market**: Excluding the UK, **EIRE** generated **£356,041.86**, making it the strongest international market.
+* **Average Order Value (AOV)**: The average order value was **£457.88**, which provides a useful benchmark for future campaign uplift analysis.
 
 
 
@@ -152,3 +153,91 @@
 * **Data Quality Enforced**: the base CTE successfully filtered out negative quantities and prices (Quantity > 0, Price > 0), ensuring only valid, revenue-generating transactions influenced the final RFM scores.
 
 
+## Day 39: Power BI Data Model Setup
+
+### What Was Done
+
+* **Created the initial Power BI model**: built the foundation report in `powerbi/Retail_DD_Day39_DataModel.pbix`.
+* **Loaded the cleaned transaction dataset**: used the cleaned retail table as the reporting base.
+* **Prepared the report model for KPI measures**: set up the structure used later for revenue, orders, customers, and AOV reporting.
+* **Validated the handoff from SQL/Python into Power BI**: confirmed the dataset was ready for dashboard page development.
+
+### Key Findings
+
+* **The reporting layer was built on 400,947 cleaned transaction rows**.
+* **The model supports £8,798,233.74 in revenue across 19,215 orders and 4,314 customers**.
+* **Day 39 established the reporting foundation** used by all later Power BI pages.
+
+
+## Day 40: Power BI Executive Summary
+
+### What Was Done
+
+* **Created the `Executive Summary` page**: built the first dashboard page in `powerbi/Retail_DD_Day40_ExecutiveSummary.pbix`.
+* **Added four KPI cards**: Total Revenue, Total Orders, Avg Order Value, and Total Customers.
+* **Added a monthly revenue trend chart**: visualized sales performance over time.
+* **Added a Top 10 products chart**: ranked products by revenue contribution.
+* **Added a country revenue map**: visualized geographic revenue distribution.
+
+### Key Findings
+
+* **Total revenue: £8,798,233.74** across **19,215 orders**.
+* **Average order value: £457.88** with **4,314 unique customers**.
+* **Peak revenue month: November 2010** with **£1,166,460.02**.
+* **Top product by revenue: `WHITE HANGING HEART T-LIGHT HOLDER`** with **£151,339.16**.
+* **Top international market: EIRE** with **£356,041.86** in revenue.
+
+
+## Day 41: Power BI Customer Intelligence
+
+### What Was Done
+
+* **Added the `Customer Intelligence` page**: extended the report in `powerbi/Retail_DD_Day41_CustomerIntelligence.pbix`.
+* **Connected `rfm_segments` data**: used the segmentation output for customer analysis in Power BI.
+* **Built a customer segment donut chart**: visualized the distribution of RFM segments.
+* **Added a Champions KPI card**: highlighted the share of customers classified as Champions.
+* **Built a frequency vs spend scatter chart**: compared purchase frequency against monetary value by segment.
+* **Added a customer detail table and segment slicer**: enabled drilldown by segment.
+
+### Key Findings
+
+* **4,312 customers were segmented** into **6 RFM groups**.
+* **Largest segment: Loyal Customers** with **988 customers (22.91%)**.
+* **Needs Attention** accounts total **865 customers (20.06%)**.
+* **Champions** account for **460 customers (10.67%)** of the segmented base.
+* **The report expanded from KPI tracking into customer lifecycle analysis**.
+
+
+## Day 42: Power BI Trend Analysis
+
+### What Was Done
+
+* **Created the `Trend Analysis` page**: built a time-intelligence view in `powerbi/Retail_DD_Day42_TrendAnalysis_Final.pbix`.
+* **Introduced a `DateTable`**: enabled proper calendar-based trend analysis.
+* **Added a revenue vs prior-year line chart**: compared current monthly performance against last year.
+* **Added a YoY KPI card**: surfaced year-over-year change directly on the page.
+* **Added weekday and hourly revenue visuals**: analyzed when revenue is generated across the week and day.
+
+### Key Findings
+
+* **Revenue accelerated sharply from September to November 2010**, with **November 2010** as the peak month at **£1,166,460.02**.
+* **Top revenue day: Thursday** with **£1,858,159.18**.
+* **Top revenue hour: 12:00** with **£1,365,413.49**.
+* **December 2010 YoY revenue is -54.55% versus December 2009**, but the dataset only runs through **December 9, 2010**, so the month is incomplete.
+
+
+## Day 43: Power BI Final Report Polish
+
+### What Was Done
+
+* **Polished the final report layout**: finalized the Day 43 report in `powerbi/Retail_DD_Day43_ReportPolish_Final.pbix`.
+* **Moved the final visuals onto the enriched table**: used `retail_enriched` as the final reporting source.
+* **Added a 3-month rolling average to the trend chart**: improved the trend view beyond the Day 42 version.
+* **Added presentation polish elements**: included a title banner, logo, and last refresh label.
+* **Consolidated the final page design**: turned the report into a presentation-ready deliverable.
+
+### Key Findings
+
+* **The final trend page combines current revenue, last-year revenue, and a 3-month rolling average in one executive view**.
+* **The enriched reporting table contains 13 columns**, adding `Revenue`, `Month`, `DayOfWeek`, `Hour`, and `Days_Ago` to the cleaned transaction base.
+* **The report is presentation-ready** with branding and refresh metadata layered on top of the analytical content.

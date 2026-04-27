@@ -1,4 +1,5 @@
 # Retail Deep Dive | UK E-Commerce Analytics
+**Tech Stack:** Python, Pandas, SQLite, SQL, Power BI
 
 ## Project Overview
 End-to-end analytics project built on the UCI Online Retail II dataset.

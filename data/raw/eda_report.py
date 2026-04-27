@@ -1,20 +1,26 @@
+from pathlib import Path
+
 import pandas as pd
 
-# Load the data using your existing Mac path
-file_path = '/Users/samandeep/Downloads/online_retail.csv'
-df = pd.read_csv(file_path, encoding='ISO-8859-1')
 
-print("1. Null Counts Per Column:")
-print(df.isnull().sum())
+RAW_PATH = Path(__file__).resolve().parent / "online_retail_II.xlsx"
 
-print("\n2. Unique Customer Count:")
-unique_customers = df['CustomerID'].nunique()
-print(unique_customers)
 
-print("\n3. Negative Quantities (Returns):")
-negative_qty = df[df['Quantity'] < 0]
-print(len(negative_qty))
+def main() -> None:
+    df = pd.read_excel(RAW_PATH)
 
-print("\n4. Cancelled Orders (Invoices starting with 'C'):")
-cancelled_orders = df[df['InvoiceNo'].astype(str).str.startswith('C', na=False)]
-print(len(cancelled_orders))
+    print("1. Null Counts Per Column:")
+    print(df.isnull().sum())
+
+    print("\n2. Unique Customer Count:")
+    print(df["Customer ID"].nunique())
+
+    print("\n3. Negative Quantities (Returns):")
+    print(len(df[df["Quantity"] < 0]))
+
+    print("\n4. Cancelled Orders (Invoices starting with 'C'):")
+    print(len(df[df["Invoice"].astype(str).str.startswith("C", na=False)]))
+
+
+if __name__ == "__main__":
+    main()

@@ -9,9 +9,9 @@ I built the full pipeline end-to-end: cleaned the raw data in Python,
 engineered RFM features, loaded it into SQLite for SQL analysis, then 
 visualised the findings in a 3-page Power BI dashboard.
 
-The key insight was around customer segmentation - only 460 customers 
-(10.67%) are Champions driving disproportionate revenue, while 865 
-customers (20%) are Lost and need a win-back strategy.
+The key insight was around customer segmentation - only 474 customers 
+(11.0%) are Champions driving 51.2% of all revenue, while 549 
+customers (12.7%) are Lost and need a win-back strategy.
 
 Peak trading is Thursday at 12pm, which directly informs when a 
 marketing team should schedule campaigns."

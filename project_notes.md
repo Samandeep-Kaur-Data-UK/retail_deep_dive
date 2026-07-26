@@ -202,9 +202,9 @@
 ### Key Findings
 
 * **4,312 customers were segmented** into **6 RFM groups**.
-* **Largest segment: Loyal Customers** with **988 customers (22.91%)**.
-* **Needs Attention** accounts total **865 customers (20.06%)**.
-* **Champions** account for **460 customers (10.67%)** of the segmented base.
+* **Largest segment: Loyal Customers** with **974 customers (22.6%)**.
+* **Needs Attention** accounts total **899 customers (20.8%)**.
+* **Champions** account for **474 customers (11.0%)** of the segmented base, driving **51.2%** of all revenue.
 * **The report expanded from KPI tracking into customer lifecycle analysis**.
 
 

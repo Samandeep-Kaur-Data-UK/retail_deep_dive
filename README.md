@@ -30,8 +30,8 @@ The workflow covers the full analytics pipeline: raw data inspection, Python cle
 | Total Orders | 19,215 |
 | Average Order Value | £457.88 |
 | Total Customers | 4,314 |
-| Champions (RFM) | 460 customers |
-| Champions Share | 10.67% |
+| Champions (RFM) | 474 customers |
+| Champions Share | 11.0% |
 | Repeat Purchase Rate | 67.06% |
 | Peak Revenue Month | November 2010 (£1.17M) |
 | Peak Trading Day | Thursday |
@@ -39,7 +39,7 @@ The workflow covers the full analytics pipeline: raw data inspection, Python cle
 | Top International Market | EIRE (£356k) |
 
 ## Business Recommendations
-- Prioritise retention and CRM campaigns around the 460 Champion customers who drive disproportionate value.
+- Prioritise retention and CRM campaigns around the 474 Champion customers who drive 51.2% of all revenue.
 - Build win-back activity for lower-value and at-risk segments before they move into churn.
 - Time promotional pushes around Thursday midday, the strongest revenue window in the dataset.
 - Use EIRE as the clearest international expansion benchmark outside the UK market.
